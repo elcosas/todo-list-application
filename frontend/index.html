@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <title>To do list</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="index.js" defer></script>
+        <!-- <link rel="icon" href="images/favicon.png" type="image/x-icon"> -->
+    </head>
+    <body>
+        <!-- Title area -->
+        <div id="top-area">
+            <div id="title-area">
+                <h1>
+                    To Do List!
+                </h1>
+            </div>
+            
+            <!-- Todo list items area -->
+            <div id="todo-list-items-area">
+                <div class="todo-list-item"></div>
+            </div>
+        </div>  
+
+        <!-- Save and Load area -->
+        <div id="save-load-area">
+            <div id="save-area">
+                <h2 id="save-area-h2">Save using code #</h2>
+                <input type="text" id="save-code-text-box"  placeholder="Input code to save current todo list">
+                <button id="save-button">SAVE</button>
+            </div>
+            <div id="load-area">
+                <h2 id="load-area-h2">Load this code #</h2>
+                <input type="text" id="load-code-text-box"  placeholder="Input code to open existing todo list">
+                <button id="load-button">LOAD</button>
+            </div>
+        </div>
+    </body>
+</html>

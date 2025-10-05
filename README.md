@@ -1,1 +1,1 @@
-# Todo-js
+# Todo list application

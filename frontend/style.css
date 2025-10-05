@@ -1,8 +1,12 @@
+html {
+    height: 100%;
+}
+
 body {
     display: flex;
+    height: 100%;
     flex-direction: column;
     margin: 0px;
-    padding: 0px;
 }
 
 /* Title area */
@@ -37,7 +41,7 @@ body {
     padding: 4px;
     gap: 16px;
     background-color: lightgray;
-
+    margin-top: auto;
 }
     /* Save area */
     #save-load-area #save-area {

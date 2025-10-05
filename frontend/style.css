@@ -38,7 +38,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 4px;
+    padding: 8px;
     gap: 16px;
     background-color: lightgray;
     margin-top: auto;
@@ -60,11 +60,11 @@ body {
 
     #save-load-area #save-code-text-box {
         border-radius: 8px;
-        width: 65%;
+        width: 75%;
     }
 
     #save-load-area #save-button {
-        width: 65%;
+        width: 75%;
         height: 32px;
         background-color: lightgreen;
         border: solid 2px black;
@@ -92,11 +92,11 @@ body {
 
     #save-load-area #load-code-text-box {
         border-radius: 8px;
-        width: 65%;
+        width: 75%;
     }
 
     #save-load-area #load-button {
-        width: 65%;
+        width: 75%;
         height: 32px;
         background-color: rgb(118, 198, 255);
         border: solid 2px black;

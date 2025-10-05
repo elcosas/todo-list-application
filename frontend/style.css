@@ -7,11 +7,18 @@ body {
     height: 100%;
     flex-direction: column;
     margin: 0px;
+    background-color: skyblue;
 }
 
 /* Title area */
 #top-area {
     flex-grow: 1;
+    padding: 5%;
+}
+
+#todo-area {
+    background-color: darkslategray;
+    border-radius: 8px;
 }
 
 #title-area {
@@ -27,10 +34,13 @@ body {
 /* Todo list items area */
 #todo-list-items-area {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.todo-list-item {
-
+#todo-list-items-area #todo-list-add-item-button {
+    width: 90%;
+    margin-bottom: 8px;
 }
 
 /* Save and Load areas */

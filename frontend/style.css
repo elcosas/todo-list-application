@@ -10,8 +10,47 @@ body {
     background-color: skyblue;
 }
 
+/* Header area */
+#header-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: rgb(47, 55, 55);
+}
+
+#header-area #github {
+    margin-right: auto;
+    color: antiquewhite;
+}
+
+#header-area #save {
+    height: 80%;
+    background-color: lightgreen;
+    border: solid 2px black;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#header-area #load {
+    height: 80%;
+    background-color: rgb(118, 198, 255);
+    border: solid 2px black;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
 /* Title area */
-#top-area {
+#main-area {
     flex-grow: 1;
     padding: 5%;
 }
@@ -27,7 +66,9 @@ body {
 }
 
 #title-area h1 {
-    font-size: 64px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 48px;
     text-decoration: underline;
 }
 

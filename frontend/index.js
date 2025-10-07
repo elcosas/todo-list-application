@@ -11,10 +11,18 @@ q_todoListItemArea.addEventListener("click", (event) => {
 
         inputBox.addEventListener("keydown", function(event) {
             if(event.key == "Enter") {
+                console.log(inputBox.value);
+                typedInTextBox = inputBox.value;
+                
                 const addItemButton = document.createElement("button");
                 addItemButton.id = "todo-list-add-item-button";
                 addItemButton.textContent = "+ Add Item";
                 q_todoListItemArea.replaceChild(addItemButton, inputBox);
+
+                const todoItem = document.createElement("div");
+                todoItem.textContent = typedInTextBox;
+                todoItem.setAttribute("style", "background: rgba(89, 148, 148, 1); width: 85%; height: 25px; margin: 4px; padding: 4px; borderRadius: 4px;");
+                q_todoListItemArea.appendChild(todoItem);
             }
         });
     }

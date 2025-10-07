@@ -6,7 +6,7 @@ q_todoListItemArea.addEventListener("click", (event) => {
     const q_btnAddToDoList = document.querySelector("#todo-list-add-item-button");
     if(event.target.id === "todo-list-add-item-button") {
         const inputBox = document.createElement("input");
-        inputBox.setAttribute("style", "color: blue; background: white;");
+        inputBox.setAttribute("style", "color: blue; background: white; border: solid 2px rgba(104, 215, 215, 1)");
         q_todoListItemArea.replaceChild(inputBox, q_btnAddToDoList);
 
         inputBox.addEventListener("keydown", function(event) {

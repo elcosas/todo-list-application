@@ -22,16 +22,10 @@ q_todoListItemArea.addEventListener("click", (event) => {
                 const todoItem = document.createElement("div");
                 todoItem.textContent = typedInTextBox;
                 todoItem.setAttribute("style", "background: rgba(89, 148, 148, 1); width: 85%; height: 25px; margin: 4px; padding: 4px; borderRadius: 4px;");
-                q_todoListItemArea.appendChild(todoItem);
+
+                const q_btnAddToDoList = document.querySelector("#todo-list-add-item-button");
+                q_todoListItemArea.insertBefore(todoItem, q_btnAddToDoList);
             }
         });
     }
-
 });
-
-
-
-
-// const inputBox = document.createElement("input");
-// inputBox.setAttribute("style", "color: blue; background: white;");
-// q_todoListItemArea.insertBefore(inputBox, q_btnAddToDoList);

@@ -1,5 +1,6 @@
 import http from 'http';
 import fs from 'fs';
+import sqlite3 from 'sqlite3';
 
 const PORT = 8080;
 
@@ -10,6 +11,16 @@ let dummy_data = [
   {code: 'cole', tasks: ['do laundry', 'buy milk']},
   {code: 'sean', tasks: ['clean dishes']}
 ];
+
+function initDatabase() {
+  let db = new sqlite3.Database(`${import.meta.dirname}/todos.db`, () => {});
+  db.serialize(() => {
+    db.run('create table if not exists todos (save_id text primary key, todo_list text not null)');
+  });
+  return db;
+}
+
+initDatabase();
 
 const server = http.createServer((req, res) => {
   const {method, url} = req;

@@ -197,5 +197,39 @@ body {
 }
 
 #overlay #overlay-content {
+    width: 25%;
+    height: 25%;
+    display: flex;
     background-color: blue;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#overlay #overlay-title {
+    font-size: 200%;
+    text-align: center;
+}
+
+#overlay #overlay-input {
+    width: 80%;
+    aspect-ratio: 5/1;
+}
+
+#overlay #overlay-buttons {
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+#overlay #overlay-buttons-save {
+    width: 35%;
+}
+
+#overlay #overlay-buttons-load {
+    width: 35%;
+
 }

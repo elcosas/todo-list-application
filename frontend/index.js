@@ -1,7 +1,6 @@
-// Query Selectors
+// Add todo items
 const q_todoListItemArea = document.querySelector("#todo-list-items-area");
 
-// Event listners
 q_todoListItemArea.addEventListener("click", (event) => {
     const q_btnAddToDoList = document.querySelector("#todo-list-add-item-button");
     if(event.target.id === "todo-list-add-item-button") {
@@ -28,4 +27,11 @@ q_todoListItemArea.addEventListener("click", (event) => {
             }
         });
     }
+});
+
+// Save button pop up
+const q_saveButton = document.querySelector("#save");
+
+q_saveButton.addEventListener("click", (event) => {
+    alert("save");
 });

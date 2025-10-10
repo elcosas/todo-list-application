@@ -7,7 +7,7 @@ body {
     height: 100%;
     flex-direction: column;
     margin: 0px;
-    background-color: skyblue;
+    background-color: lightgray;
 }
 
 /* Header area */
@@ -19,7 +19,7 @@ body {
     padding-right: 8px;
     padding-top: 4px;
     padding-bottom: 4px;
-    background-color: rgb(47, 55, 55);
+    background-color: rgb(25, 25, 25);
 }
 
 #header-area #github {
@@ -56,7 +56,7 @@ body {
 }
 
 #todo-area {
-    background-color: darkslategray;
+    background-color: rgb(25, 25, 25);
     border-radius: 8px;
 }
 
@@ -70,6 +70,7 @@ body {
     margin-bottom: 16px;
     font-size: 48px;
     text-decoration: underline;
+    color: whitesmoke
 }
 
 /* Todo list items area */
@@ -81,17 +82,18 @@ body {
 }
 
 #todo-list-items-area #todo-list-add-item-button {
-    width: 90%;
+    width: 25%;
     margin-bottom: 8px;
-    background-color: darkslategray;
+    background-color: rgb(25, 25, 25);
     color: antiquewhite;
     border: none;
     border-radius: 4px;
     transition-duration: 0.4s;
+    padding: 4px;
 }
 
     #todo-list-items-area #todo-list-add-item-button:hover {
-        background-color: rgb(80, 133, 133);
+        background-color: rgb(125, 125, 125);
         color: antiquewhite;
     }
 
@@ -174,10 +176,68 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: rgb(47, 55, 55);
+    background-color: rgb(25, 25, 25);
 }
 
 #footer-area p {
     color: white;
     margin: 4px;
+}
+
+/* Overlay */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#overlay #overlay-content {
+    width: 25%;
+    height: 25%;
+    display: flex;
+    background-color: rgb(25, 25, 25);
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 2px rgb(100, 100, 100);
+    border-radius: 16px;
+}
+
+#overlay #overlay-title {
+    color: whitesmoke;
+    font-size: 200%;
+    text-align: center;
+}
+
+#overlay #overlay-input {
+    width: 80%;
+    aspect-ratio: 8/1;
+    margin-bottom: auto;
+}
+
+#overlay #overlay-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+#overlay #overlay-buttons-cancel {
+    width: 35%;
+    aspect-ratio: 3/1;
+    background-color: rgb(238, 104, 104);
+}
+
+#overlay #overlay-buttons-save {
+    width: 35%;
+    aspect-ratio: 3/1;
+    background-color: lightgreen;
 }

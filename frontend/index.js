@@ -29,9 +29,17 @@ q_todoListItemArea.addEventListener("click", (event) => {
     }
 });
 
-// Save button pop up
+// Save button creates a pop up
 const q_saveButton = document.querySelector("#save");
+const overlay = document.querySelector("#overlay");
+overlay.classList.add("overlay-off");
 
 q_saveButton.addEventListener("click", (event) => {
-    alert("save");
+    overlay.classList.remove("overlay-off");
 });
+
+    // Pop up's cancel button removes itself
+    const q_cancelButtonPopUp = document.querySelector("#overlay-buttons-cancel");
+    q_cancelButtonPopUp.addEventListener("click", (event) => {
+        overlay.classList.add("overlay-off");
+    });

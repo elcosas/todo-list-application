@@ -39,7 +39,23 @@ q_saveButton.addEventListener("click", (event) => {
 });
 
     // Pop up's cancel button removes itself
-    const q_cancelButtonPopUp = document.querySelector("#overlay-buttons-cancel");
-    q_cancelButtonPopUp.addEventListener("click", (event) => {
+    const q_cancelButtonPopUpSave = document.querySelector("#overlay-buttons-cancel");
+    q_cancelButtonPopUpSave.addEventListener("click", (event) => {
         overlay.classList.add("overlay-off");
+    });
+
+
+// Load button creates a pop up
+const q_loadButton = document.querySelector("#load");
+const overlayLoad = document.querySelector("#overlay");
+overlayLoad.classList.add("overlay-off");
+
+q_loadButton.addEventListener("click", (event) => {
+    overlayLoad.classList.remove("overlay-off");
+});
+
+    // Pop up's cancel button removes itself
+    const q_cancelButtonPopUpLoad = document.querySelector("#overlay-buttons-cancel");
+    q_cancelButtonPopUp.addEventListener("click", (event) => {
+        overlayLoad.classList.add("overlay-off");
     });

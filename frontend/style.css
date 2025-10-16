@@ -202,7 +202,7 @@ body {
 }
 
 @media (orientation: landscape) {
-    #overlay #overlay-content {
+    #overlay #overlay-content, #overlay-load #overlay-content {
         width: 35%;
         aspect-ratio: 1.5/1;
         display: flex;
@@ -217,7 +217,7 @@ body {
 }
 
 @media (orientation: portrait) {
-    #overlay #overlay-content {
+    #overlay #overlay-content, #overlay-load #overlay-content {
         width: 80%;
         aspect-ratio: 1.5/1;
         display: flex;
@@ -232,32 +232,32 @@ body {
 }
 
 
-#overlay #overlay-title {
+#overlay #overlay-title, #overlay-load #overlay-title {
     color: whitesmoke;
     font-size: 200%;
     text-align: center;
 }
 
-#overlay #overlay-input {
+#overlay #overlay-input, #overlay-load #overlay-input {
     width: 80%;
     aspect-ratio: 8/1;
     margin-bottom: auto;
 }
 
-#overlay #overlay-buttons {
+#overlay #overlay-buttons, #overlay-load #overlay-buttons {
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 8px;
 }
 
-#overlay #overlay-buttons-cancel {
+#overlay #overlay-buttons-cancel, #overlay-load #overlay-buttons-cancel-load {
     width: 35%;
     aspect-ratio: 3/1;
     background-color: rgb(238, 104, 104);
 }
 
-#overlay #overlay-buttons-save {
+#overlay #overlay-buttons-save, #overlay-load #overlay-buttons-save {
     width: 35%;
     aspect-ratio: 3/1;
     background-color: lightgreen;

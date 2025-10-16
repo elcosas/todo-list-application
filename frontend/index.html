@@ -52,16 +52,29 @@
             <p>Footer area</p>
         </div>
 
-        <!-- Overlay -->
-        <div id="overlay" class="overlay-on overlay-off">
-            <div id="overlay-content">
-                <h1 id="overlay-title">My To-do List</h1>
-                <input placeholder="Input ID here..." id="overlay-input"></input>
-                <div id="overlay-buttons">
-                    <button id="overlay-buttons-cancel">Cancel</button>
-                    <button id="overlay-buttons-save">Save ID</button>
+        <!-- Overlays(appears as needed) -->
+            <!-- Save button overlay -->
+            <div id="overlay" class="overlay-on overlay-off">
+                <div id="overlay-content">
+                    <h1 id="overlay-title">My To-do List</h1>
+                    <input placeholder="Input ID here..." id="overlay-input"></input>
+                    <div id="overlay-buttons">
+                        <button id="overlay-buttons-cancel">Cancel</button>
+                        <button id="overlay-buttons-save">Save ID</button>
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <!-- Load button overlay -->
+            <div id="overlay-load" class="overlay-on overlay-off">
+                <div id="overlay-content">
+                    <h1 id="overlay-title">Load a To-do list</h1>
+                    <input placeholder="Input ID here..." id="overlay-input"></input>
+                    <div id="overlay-buttons">
+                        <button id="overlay-buttons-cancel-load">Cancel</button>
+                        <button id="overlay-buttons-save">Save ID</button>
+                    </div>
+                </div>
+            </div>
     </body>
 </html>

@@ -54,7 +54,7 @@
 
         <!-- Overlays(appears as needed) -->
             <!-- Save button overlay -->
-            <div id="overlay" class="overlay-on overlay-off">
+            <div id="overlay-save" class="overlay-on overlay-off">
                 <div id="overlay-content">
                     <h1 id="overlay-title">My To-do List</h1>
                     <input placeholder="Input ID here..." id="overlay-input"></input>
@@ -78,3 +78,9 @@
             </div>
     </body>
 </html>
+
+<!-- NOTES: Need to rename all of the id and classes for the save and load button's
+in the HTML, CSS, and JS files. Currently they share some code in the css files and maybe
+the JS. Anyway, it is best to clean up all of that and rename them to be more clear.
+Also, I need to change the JS overlayLoad.classList.add("overlay-off"); and flip it so
+it makes a bit more sense. Like I should add the overlay not add an off overlay. -->

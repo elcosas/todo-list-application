@@ -1,0 +1,119 @@
+/* 
+Sections: Header, Main, Todo list, and Footer
+Indented = Part of classlist */
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    margin: 0px;
+    background-color: lightgray;
+}
+
+/* Header area */
+#header-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: rgb(25, 25, 25);
+}
+
+#header-area #github {
+    margin-right: auto;
+    color: antiquewhite;
+}
+
+#header-area #save {
+    height: 80%;
+    background-color: lightgreen;
+    border: solid 2px black;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#header-area #load {
+    height: 80%;
+    background-color: rgb(118, 198, 255);
+    border: solid 2px black;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Title area */
+#main-area {
+    flex-grow: 1;
+    padding: 5%;
+}
+
+#main-area #todo-list-add-item-button {
+    cursor: pointer;
+}
+
+#todo-area {
+    background-color: rgb(25, 25, 25);
+    border-radius: 8px;
+}
+
+#title-area {
+    display: flex;
+    justify-content: center;
+}
+
+#title-area h1 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 48px;
+    text-decoration: underline;
+    color: whitesmoke
+}
+
+/* Todo list items area */
+#todo-list-items-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+}
+
+#todo-list-items-area #todo-list-add-item-button {
+    width: 25%;
+    margin-bottom: 8px;
+    background-color: rgb(25, 25, 25);
+    color: antiquewhite;
+    border: none;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    padding: 4px;
+}
+
+    #todo-list-items-area #todo-list-add-item-button:hover {
+        background-color: rgb(125, 125, 125);
+        color: antiquewhite;
+    }
+
+/* Footer area */
+#footer-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(25, 25, 25);
+}
+
+#footer-area p {
+    color: white;
+    margin: 4px;
+}
+

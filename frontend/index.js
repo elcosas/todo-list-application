@@ -31,7 +31,7 @@ q_todoListItemArea.addEventListener("click", (event) => {
 
 // Save button creates a pop up
 const q_saveButton = document.querySelector("#save");
-const overlay = document.querySelector("#overlay");
+const overlay = document.querySelector("#overlay-save");
 overlay.classList.add("overlay-off");
 
 q_saveButton.addEventListener("click", (event) => {

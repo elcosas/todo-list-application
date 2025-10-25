@@ -58,6 +58,10 @@ body {
     padding: 5%;
 }
 
+#main-area #todo-list-add-item-button {
+    cursor: pointer;
+}
+
 #todo-area {
     background-color: rgb(25, 25, 25);
     border-radius: 8px;
@@ -98,80 +102,6 @@ body {
     #todo-list-items-area #todo-list-add-item-button:hover {
         background-color: rgb(125, 125, 125);
         color: antiquewhite;
-    }
-
-/* Save and Load areas */
-#save-load-area {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 8px;
-    gap: 16px;
-    background-color: lightgray;
-    margin-top: auto;
-}
-    /* Save area */
-    #save-load-area #save-area {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        width: 50%;
-    }
-
-    #save-load-area #save-area-h2 {
-        font-size: 24px;
-        text-decoration: underline;
-        margin-bottom: 4px;
-    }
-
-    #save-load-area #save-code-text-box {
-        border-radius: 8px;
-        width: 75%;
-    }
-
-    #save-load-area #save-button {
-        width: 75%;
-        height: 32px;
-        background-color: lightgreen;
-        border: solid 2px black;
-        color: black;
-        text-align: center;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 8px;
-    }
-
-    /* Load area */
-    #save-load-area #load-area {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        width: 50%;
-    }
-
-    #save-load-area #load-area-h2 {
-        font-size: 24px;
-        text-decoration: underline;
-        margin-bottom: 4px;
-    }
-
-    #save-load-area #load-code-text-box {
-        border-radius: 8px;
-        width: 75%;
-    }
-
-    #save-load-area #load-button {
-        width: 75%;
-        height: 32px;
-        background-color: rgb(118, 198, 255);
-        border: solid 2px black;
-        color: black;
-        text-align: center;
-        font-size: 16px;
-        border-radius: 8px;
-        cursor: pointer;
     }
 
 /* Footer area */

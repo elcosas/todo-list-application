@@ -8,6 +8,8 @@ const PORT = 8080;
 
 const CONTENT_TYPE_JSON = {"Content-Type": "application/json"};
 const CONTENT_TYPE_HTML = {"Content-Type": "text/html"}; 
+const CONTENT_TYPE_CSS = {"Content-Type": "text/css"}; 
+const CONTENT_TYPE_JS = {"Content-Type": "application/javascript"}; 
 
 let dummy_data = [
   {code: 'cole', tasks: ['do laundry', 'buy milk']},
@@ -51,9 +53,24 @@ const server = http.createServer((req, res) => {
       res.end('OK');
     });
   }
+  else if (req.method == 'GET' && parsedUrl.pathname == '/styles/main.css') {
+    const html = fs.readFileSync('./frontend/styles/main.css', 'utf8');
+    res.writeHead(200, CONTENT_TYPE_CSS);
+    res.end(html);
+  }
+  else if (req.method == 'GET' && parsedUrl.pathname == '/styles/overlays.css') {
+    const html = fs.readFileSync('./frontend/styles/overlays.css', 'utf8');
+    res.writeHead(200, CONTENT_TYPE_CSS);
+    res.end(html);
+  }
+  else if (req.method == 'GET' && parsedUrl.pathname == '/index.js') {
+    const html = fs.readFileSync('./frontend/index.js', 'utf8');
+    res.writeHead(200, CONTENT_TYPE_JS);
+    res.end(html);
+  }
   else if (req.method == 'GET') {
     const html = fs.readFileSync('./frontend/index.html', 'utf8');
-    res.writeHead(200, CONTENT_TYPE_JSON);
+    res.writeHead(200, CONTENT_TYPE_HTML);
     res.end(html);
   }
   else {

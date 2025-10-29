@@ -1,8 +1,5 @@
 import http from 'http';
-import url from 'url';
-import querystring from 'querystring';
 import fs from 'fs';
-import sqlite3 from 'sqlite3';
 
 const PORT = 8080;
 
@@ -16,42 +13,15 @@ let dummy_data = [
   {code: 'sean', tasks: ['clean dishes']}
 ];
 
-function initDatabase() {
-  let db = new sqlite3.Database(`${import.meta.dirname}/todos.db`);
-  db.serialize(() => {
-    db.run('create table if not exists todos (save_id text primary key, todo_list text not null)');
-  });
-  return db;
-}
-
-let db = initDatabase();
-
 const server = http.createServer((req, res) => {
-  const parsedUrl = url.parse(req.url, true);
-  if (req.method == 'GET' && parsedUrl.path == '/api/') {
-    let todos_data;
-    db.serialize(() => {
-      db.get(`select todo_list from todos where save_id = ${parsedUrl.query.save_id}`, (err, row) => {
-        todos_data = row.todo_list;
-      });
-    });
+  const {method, url} = req;
+  if (method == 'GET' && url.includes('/api/')) {
     res.writeHead(200, CONTENT_TYPE_JSON);
-    res.end(JSON.stringify(todos_data));
+    res.end(JSON.stringify(dummy_data));
   }
-  else if (req.method == 'POST' && parsedUrl.path == '/api') {
-    let body = '';
-    req.on('data', (chunk) => {
-      body += chunk.toString();
-    });
-    req.on('end', () => {
-      const parsedData = querystring.parse(body);
-      console.log(`insert into todos values ("${parsedData.save_id}", "${parsedData.todo_data}")`);
-      db.serialize(() => {
-        db.run(`insert into todos values ("${parsedData.save_id}", "${parsedData.todo_data}")`);
-      });
-      res.writeHead(201, CONTENT_TYPE_JSON);
-      res.end('OK');
-    });
+  else if (method == 'POST' && url.includes('/api/')) {
+    res.writeHead(200, CONTENT_TYPE_JSON);
+    res.end(JSON.stringify(dummy_data));
   }
   else if (req.method == 'GET' && parsedUrl.pathname == '/styles/main.css') {
     const html = fs.readFileSync('./frontend/styles/main.css', 'utf8');

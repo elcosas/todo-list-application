@@ -10,7 +10,7 @@ q_todoListItemArea.addEventListener("click", (event) => {
 
         inputBox.addEventListener("keydown", function(event) {
             if(event.key == "Enter") {
-                console.log(inputBox.value);
+                console.log(inputBox.value); // logs the text that user just typed in and places it as one todo item
                 typedInTextBox = inputBox.value;
                 
                 const addItemButton = document.createElement("button");
@@ -20,6 +20,7 @@ q_todoListItemArea.addEventListener("click", (event) => {
 
                 const todoItem = document.createElement("div");
                 todoItem.textContent = typedInTextBox;
+                todoItem.classList.add("todo-list-items");
                 todoItem.setAttribute("style", "background: rgb(75, 75, 75); width: 85%; height: 25px; margin: 4px; padding: 4px; color: white; border-radius: 4px;");
 
                 const q_btnAddToDoList = document.querySelector("#todo-list-add-item-button");
@@ -41,6 +42,19 @@ q_saveButton.addEventListener("click", (event) => {
     const q_cancelButtonPopUpSave = document.querySelector("#overlay-buttons-cancel");
     q_cancelButtonPopUpSave.addEventListener("click", (event) => {
         overlay.classList.add("overlay-off");
+    });
+    
+
+    const q_SaveButtonPopUpSave = document.querySelector("#overlay-buttons-save");
+    q_SaveButtonPopUpSave.addEventListener("click", (event) => {
+        const q_idTextbox = document.querySelector("#overlay-input");
+        let saveId = q_idTextbox.value;
+
+        const q_todo_list_items = document.querySelectorAll(".todo-list-items");
+        let saveTodoListItems = q_todo_list_items;
+        q_todo_list_items.forEach(element => {
+            console.log(element.textContent); // Logs the text content of each div in the todo list
+        });
     });
 });
 
